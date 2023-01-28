@@ -1,0 +1,294 @@
+body {
+  position: relative;
+}
+
+header {
+  display: grid;
+  grid-template-columns: 24px 400px 1fr 84px 24px;
+  grid-template-areas: 
+   'left-space logo nav account right-space';
+  position: fixed;
+  z-index: 1;
+  width: 100vw;
+  height: 64px;
+  line-height: 64px;
+  background-color: #ff4500;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.5);
+}
+header .logo {
+  grid-area: logo;
+  font-size: 2rem;
+  font-weight: 700;
+  text-decoration: none;
+  color: #fff;
+}
+header .nav {
+  grid-area: nav;
+}
+header .nav li {
+  display: inline-block;
+  margin-right: 36px;
+  font-size: 1.25rem;
+  text-decoration: none;
+  color: #fff;
+  cursor: pointer;
+}
+header .nav li.on {
+  border-bottom: 4px solid white;
+  height: 60px;
+}
+header .account {
+  grid-area: account;
+  font-size: 1.5rem;
+  text-decoration: none;
+  color: #fff;
+}
+header .nav li:hover,
+header .account:hover {
+  opacity: 0.67;
+}
+
+main {
+  position: relative;
+  padding-left: 240px;
+  padding-top: 64px;
+}
+main aside {
+  position: fixed;
+  top: 64px;
+  bottom: 0;
+  left: 0;
+  width: 240px;
+  background-color:#eee;
+  border-right:1px solid #d3d3d3;
+}
+main aside .option-title {
+  padding: 32px 0 0 32px;
+  font-size: 1.5em;
+  font-weight: 700;
+   color: gray;
+}
+main aside ul {
+  font-size: 1.25em;
+  margin: 32px 0;
+  line-height: 1.5em;
+}
+main aside ul li {
+  padding: 8px 34px;
+  cursor: pointer;
+}
+main aside ul li.on {
+  background-color: #ddd;
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  color: gray;
+}
+main aside ul li:hover {
+  color: white;
+  background-color: #444;
+}
+main .content {
+  min-height: calc(100vh - 196px);
+  background-color: #fafafa;
+}
+
+#intro {
+  padding: 48px 64px;
+  background-color: #fff;
+  border-bottom: 1px solid #d3d3d3;
+  font-size: 1.3rem;
+  line-height: 1.3em;
+}
+#intro h1 {
+  font-size: 1.5em;
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+
+#gallery {
+  padding: 16px;
+}
+article {
+  display: inline-block;
+  margin: 8px;
+  padding: 24px;
+  background-color:#fff ;
+  box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
+  border-radius: 12px;
+}
+article.hidden {
+  display: none;
+}
+article:hover {
+  box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.33);
+}
+article .photo {
+  width: 440px;
+  height: 320px;
+  border-radius: 4px;
+  background-size: cover;
+}
+article .info {
+  display: grid;
+  grid-template-columns: 80px 1fr;
+  grid-template-rows: 32px auto;
+  grid-template-areas:
+    'like author' 
+    'like desc';
+  margin-top: 16px;
+  font-size: 1.2rem;
+}
+article .info .like {
+  grid-area: like;
+  text-align: center;
+  padding-top: 23px;
+  font-size: 1rem;
+  font-weight: bold;
+  color: gray;
+  background-image: url("../img/interface/heart_off.png");
+  background-position: 50%;
+  background-repeat: no-repeat;
+  cursor: pointer;
+}
+article .info .like:hover {
+  opacity: 0.5;
+}
+article .info .like.on {
+  color: white;
+  background-image: url("../img/interface/heart_on.png");
+}
+article .info .author {
+  grid-area: author;
+  font-weight:700;
+  line-height: 32px;
+}
+article .info .desc {
+  grid-area: desc;
+  padding: 4px 0;
+  color: gray;
+}
+
+#upload {
+  padding: 48px;
+}
+#upload .instruction {
+  font-size: 1.3rem;
+  margin-bottom: 24px;
+}
+#upload input { 
+  margin-bottom: 12px;
+  font-size: 1rem; 
+}
+#upload .description {
+  width: 320px;
+  height: 32px;
+  padding: 0 8px;
+  line-height: 32px;
+}
+#upload .descLength {
+  margin-left: 4px;
+  color: gray;
+}
+
+#myinfo {
+  padding: 48px;
+  font-size: 1.2rem;
+}
+
+.button {
+  display: inline-block;
+  padding: 14px 24px;
+  color: white;
+  background-color: #ff4500;
+  font-size: 1.1rem;
+  cursor: pointer;
+}
+.button.cancel {
+  color: inherit;
+  background-color: #ddd;
+}
+.button:hover {
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.33);
+}
+
+#myinfo table { 
+  margin-bottom: 24px;
+}
+#myinfo table tr td { 
+  padding: 20px; 
+  border-bottom: 1px solid #ddd;
+}
+#myinfo table tr:last-child td { 
+  border-bottom: 0;
+}
+#myinfo table tr td:first-child {
+  color: gray;
+}
+#myinfo table tr td input[type=text] { 
+  width: 440px;
+  height: 32px;
+  padding: 0 8px;
+  line-height: 32px;
+  font-size: 1rem;
+}
+#myinfo table tr td label { 
+  margin-right: 16px;
+}
+
+#myinfo > div.non-edit .mi-dep.edit,
+#myinfo > div.edit .mi-dep.non-edit {
+  display: none;
+}
+
+main .dep { display: none; }
+main.gallery .dep._intro,
+main.gallery .dep._gallery,
+main.upload .dep._upload,
+main.myinfo .dep._myinfo {
+  display: block;
+}
+
+main .write {
+  position: fixed;
+  z-index: 2;
+  right: 36px;
+  bottom: 36px;
+}
+main .write div {
+  width: 88px;
+  height: 88px;
+  border-radius: 50%;
+  background-color: #ff4500;
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+  background-image: url("../img/interface//camera.png");
+  background-size: 50%;
+  background-position: 50%;
+  background-repeat: no-repeat;
+}
+main .write div:hover {
+  box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.75);
+}
+
+footer {
+  position: relative;
+  background-color:#383838;
+  padding:64px 0;
+  font-size:1.2rem;
+  text-align:center;
+  z-index: 1;
+}
+footer ul > li {
+  display: inline-block;
+  padding: 0 48px;
+}
+footer ul li:not(:last-child) {
+  border-right:1px solid gray;
+}
+footer ul > li a{
+  color: #fff;
+  text-decoration: none
+}
+footer ul > li a:hover {
+  opacity: 0.67;
+}

@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css"
+  />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link
+    rel="stylesheet"
+    href="https://fonts.googleapis.com/icon?family=Material+Icons"
+  />
+  <link rel="stylesheet" href="./css/main.css">
+  <script src="./js/data.js"></script>
+  <script src="./js/java.js"></script>
+  <title>Final Project</title>
+</head>
+<body onload="init();">
+  <header class="header">
+    <div class="header__left">
+      <button class="header__hamburger-menu border-none transparent">
+        <span class="material-icons">menu</span>
+      </button>
+      <a class="header__logo-link" href="/">
+        <h1>Youtube</h1>
+      </a>
+    </div>
+    <div class="header__center">
+      <form class="search-form">
+        <input style="color: white;" class="header__input" placeholder="검색" />
+        <div>
+          <button class="border-none transparent" type="button">
+            <span class="material-icons">search</span>
+          </button>
+          <button class="border-none transparent" type="button">
+            <span class="material-icons">mic</span>
+          </button>
+        </div>
+      </form>
+    </div>
+    <div class="header__right">
+      <button class="border-none transparent" type="button">
+        <span class="material-icons">apps</span>
+      </button>
+      <button class="border-none transparent" type="button">
+        <span class="material-icons">notifications</span>
+      </button>
+      <button class="border-none transparent" type="button">
+        <span class="material-icons">perm_identity</span>
+      </button>
+    </div>
+  </header>
+  <!-- 메인 -->
+  <main class="home">
+    <aside class="sidebar">
+      <nav class="sidebar__nav">
+        <ul class="sidebar__nav-item-list">
+          <li class="sidebar__nav-item home on" onclick="setSideMenu('home')">
+            <button class="border-none transparent">
+              <span class="material-icons">home</span>
+              <span>홈</span>
+            </button>
+          </li>
+          <li class="sidebar__nav-item history" onclick="setSideMenu('history')">
+            <button class="border-none transparent">
+              <span class="material-icons">schedule</span>
+              <span>시청기록</span>
+            </button>
+          </li>
+          <li class="sidebar__nav-item descrip" onclick="setSideMenu('descrip')">
+            <button class="border-none transparent">
+              <span class="material-icons">subscriptions</span>
+              <span>구독</span>
+            </button>
+          </li>
+        </ul>
+      </nav>
+    </aside>
+    <section class="FILTERS">
+      <ul class="filter-items">
+        <li class="filter-item all filter-item--active" onclick="setFilter('all')">
+         전체
+        </li>
+        <li class="filter-item games" onclick="setFilter('games')">
+           게임
+        </li>
+        <li class="filter-item musics" onclick="setFilter('musics')">
+          음악
+       </li>
+       <li class="filter-item lives" onclick="setFilter('lives')">
+         실시간
+        </li>
+      </ul>
+      <div class="video-list">
+        <section id="home" class="video-items">
+          <article class="video-item hidden">
+           <div class="thumbnail"></div>
+           <div class="infodetail">
+            <div class="profile"></div>
+            <div class="title"></div>
+            <div class="userId"></div>
+           </div>
+          </article>
+        </section>
+        
+        <section id="history" class="video-items">
+          <div class="historytext">
+            <a>기록</a>
+          </div>
+          <article class="video-item hidden">
+           <div class="thumbnail"></div>
+           <div class="infodetail">
+            <div class="profile"></div>
+            <div class="title"></div>
+            <div class="userId"></div>
+           </div>
+          </article>
+        </section>
+
+        <section id="descrip" class="video-items">
+          <div class="descriptext">
+            <a>오늘</a>
+          </div>
+          <article class="video-item hidden">
+           <div class="thumbnail"></div>
+           <div class="infodetail">
+            <div class="profile"></div>
+            <div class="title"></div>
+            <div class="userId"></div>
+           </div>
+          </article>
+        </section>
+
+      </div>
+    </section>
+  </main>
+  <!-- 푸터 -->
+  <footer class="footer">
+    <ul>
+      <li>
+        <a href="#" class="footer__link">회사소개</a>
+      </li>
+      <li>
+        <a href="#" class="footer__link">인재채용</a>
+      </li>
+      <li>
+        <a 
+          href="https://www.youtube.com/t/terms" 
+          class="footer__link"
+        >
+          이용약관
+        </a>
+      </li>
+      <li>
+        <a 
+          href="https://policies.google.com/privacy?hl=ko" 
+          class="footer__link"
+          target="_blank"
+        >
+          개인정보 처리 방침
+        </a>
+      </li>
+      <li>
+        <a href="#" class="footer__link">고객센터</a>
+      </li>
+    </ul>
+  </footer>
+</body>
+</html>

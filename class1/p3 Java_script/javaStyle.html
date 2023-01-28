@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var array = [
+    {
+      name: "김서현",
+      age: 24,
+      married: false
+    },
+    {
+      name: "백승협",
+      age: 19,
+      married: false
+    },
+    {
+      name: "강종식",
+      age: 37,
+      married: true
+    },
+    {
+      name: "차미나",
+      age: 29,
+      married: true
+    },
+    {
+      name: "오정균",
+      age: 40,
+      married: false
+    },
+  ];  
+
+var olE1 = document.querySelector('ol');
+
+array.forEach(function (item) {
+    var liE1 = document.createElement('li');
+    liE1.append(item.name)
+    olE1.append(liE1);    
+});
+    </script>
+
+
+</head>
+<body>
+    
+ <ol>
+
+ </ol>
+
+</body>
+</html>
