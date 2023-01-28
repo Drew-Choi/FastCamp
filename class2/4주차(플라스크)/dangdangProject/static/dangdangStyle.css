@@ -1,0 +1,15 @@
+img {
+  width: 150px;
+}
+
+.p_list {
+  list-style: none;
+}
+
+.info {
+  display: inline-block;
+  font-size: 18px;
+  line-height: 25px;
+  position: relative;
+  bottom: 20px;
+}
