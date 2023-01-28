@@ -21,12 +21,8 @@ def index():
     now = datetime.datetime.now()
     wedding = datetime.datetime(2023, 5, 5, 0, 0, 0)
     diff = (wedding - now).days
-
     guestbooks = mongo.db['wedding'].find()
-
     return render_template("index.html", diff=diff, guestbooks=guestbooks)
-
-
 
 if __name__ == '__main__':
     app.run()
