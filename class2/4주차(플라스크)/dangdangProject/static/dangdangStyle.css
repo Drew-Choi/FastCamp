@@ -4,14 +4,14 @@ img {
 
 .p_list {
   list-style: none;
+  position: relative;
+  bottom: 30px;
 }
 
 .info {
   display: inline-block;
-  font-size: 17px;
-  line-height: 25px;
   position: relative;
-  bottom: 20px;
+  top: 36px;
 }
 
 .btn {
