@@ -1,8 +1,17 @@
 from flask_pymongo import PyMongo
-from flask import Flask, render_template, request, redirect
+from flask import Flask, render_template, request, redirect, jsonify
 app = Flask(__name__)
 app.config['MONGO_URI'] = 'mongodb://localhost:27017/local'
 mongo = PyMongo(app)
+
+@app.route('/detail')
+def detail():
+    product_db = mongo.db.dangdang
+    productinfo = product_db.find_one({"product_name": request.args.get('product_name')})
+    return jsonify({
+        "product_name": productinfo.get("product_name"),
+        "contenttext": productinfo.get("contenttext")
+    })
 
 @app.route('/regi_index')
 def regi_index():

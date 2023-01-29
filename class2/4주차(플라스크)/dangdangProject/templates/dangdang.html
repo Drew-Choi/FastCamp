@@ -8,26 +8,46 @@
   <script src="https://code.jquery.com/jquery-3.6.3.js" integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM=" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="../static/dangdangStyle.css">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+  <script src="../static/dangdangjava.js"></script>
  </head>
  <body>
    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
    <ul class="p_list">
     {% for pd in productlist %}
-    <li>
-     <img src="../static/prod1.jpg" alt="장난감 블록">
-     <div class="info">
-      <strong>{{ pd.product_name }}</strong><br />
-      <small>{{ pd.location }}</small><br />
-      {{ pd.price }} <br />
-      "{{ pd.contenttext }}"
-     </div>
-    </li>
+     <li>
+      <button class="item-list" id="{{ pd.product_name }}">
+       <img src="../static/prod1.jpg">
+       <div class="info">
+        <strong>{{ pd.product_name }}</strong><br />
+        <small>{{ pd.location }}</small><br />
+        {{ pd.price }} <br />
+       </div>
+      </button>
+     </li> 
     {% endfor %}
    </ul>
 
    <br />
    
-   <a href="/regi_index" type="button" class="btn btn-primary btn-lg">상품등록하기</a>
-  
+   <a href="/regi_index"><button type="button" class="btn btn-primary" id="regi">상품등록하기</button></a>
+
+<!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel"></h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <pre id="contenttext-body"></pre>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary" data-bs-dismiss="modal">확인</button>
+        </div>
+      </div>
+    </div>
+  </div>
+   
  </body>
 </html>

@@ -5,6 +5,19 @@
 // 숫자만 사용할 수 있는 함수 (+콤마) / function inputNumberFormat(obj)
 // 숫자만 사용할 수 있는 함수 (콤마 X) / function inputOnlyNumberFormat(obj)
 
+
+$(document).ready(function() {
+  $(".item-list").click(function () { 
+    const product_N = $(this).attr('id');
+    $.get("http://127.0.0.1:5000/detail?product_name=" + product_N)
+      .then(function (result) {
+         $("#exampleModalLabel").text(result.product_name);
+         $("#contenttext-body").text(result.contenttext);
+         $("#exampleModal").modal('show');
+      });
+  });
+});
+
 function comma(str) {
   str = String(str);
   return str.replace(/(\d)(?=(?:\d{3})+(?!\d))/g, '$1,');
