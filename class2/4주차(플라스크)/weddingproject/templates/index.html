@@ -2,13 +2,24 @@
     <head>
         <meta data-n-head="ssr" name="viewport" content="width=device-width,initial-scale=1">
         <link rel="stylesheet" href="../static/styles.css">
+        <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+        <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+        <script src="../static/puresnow.js" defer></script>
+        <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+        <script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
+        <script>
+         $(document).ready(function () {
+            $(".gallery").slick();
+         });
+        </script>
     </head>
     <body>
         <div class="container">
             <div class="first">
                 <div class="overlay">
+                    <div id="snow" count="200"></div>
                     <p class="first-top">
                         김철수
                         <br />
@@ -181,6 +192,40 @@
                     </div>
                 </div>
             </div>
+
+            <div class="ro1">
+                <h4>찾아오시는 길</h4>
+                <!-- * 카카오맵 - 지도퍼가기 -->
+                <!-- 1. 지도 노드 -->
+              <div id="daumRoughmapContainer1675155614816" class="root_daum_roughmap root_daum_roughmap_landing"></div>
+
+                <!--
+                    2. 설치 스크립트
+                    * 지도 퍼가기 서비스를 2개 이상 넣을 경우, 설치 스크립트는 하나만 삽입합니다.
+                -->
+                <script charset="UTF-8" class="daum_roughmap_loader_script" src="https://ssl.daumcdn.net/dmaps/map_js_init/roughmapLoader.js"></script>
+
+                <!-- 3. 실행 스크립트 -->
+                <script charset="UTF-8">
+                    new daum.roughmap.Lander({
+                        "timestamp" : "1675155614816",
+                        "key" : "2dkk2",
+                        "mapWidth" : "640",
+                        "mapHeight" : "360"
+                    }).render();
+                </script>
+            </div>
+            
+            <div class="ro2">
+             <div class="gallery">
+              <img src="../static/a.jpg" />
+              <img src="../static/b.jpg" />
+              <img src="../static/c.jpg" />
+              <img src="../static/d.jpg" />
+              <img src="../static/e.jpg" />
+             </div>
+            </div>
+
         </div>
     </body>
 </html>
