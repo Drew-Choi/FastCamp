@@ -16,6 +16,7 @@
     width: 100%;
     max-width: 600px;
     margin: 0 auto;
+    overflow: hidden;
 }
 
 img {
@@ -178,4 +179,19 @@ body {
 
 .root_daum_roughmap {
   width: 100% !important;
+}
+
+.slick-slide {
+  height: auto;
+}
+
+.mymodal-footer {
+ text-align: center;
+ padding: 10px;
+}
+
+.mymodal-footer button {
+  color: #ffffff;
+  background-color: #196ffff2;;
+  border: none;
 }
