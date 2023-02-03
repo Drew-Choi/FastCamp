@@ -16,7 +16,11 @@
     {% for pd in productlist %}
      <li>
       <button class="item-list" id="{{ pd.product_name }}">
+       {% if pd.product_image %}
+       <img src="../static/{{ pd.product_image }}">
+       {% else %}
        <img src="../static/prod1.jpg">
+       {% endif %}
        <div class="info">
         <strong>{{ pd.product_name }}</strong><br />
         <small>{{ pd.location }}</small><br />

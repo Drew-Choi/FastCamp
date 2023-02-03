@@ -12,7 +12,7 @@ $(document).ready(function() {
     $.get("http://127.0.0.1:5000/detail?product_name=" + product_N)
       .then(function (result) {
          $("#exampleModalLabel").text(result.product_name);
-         $("#contenttext-body").text(result.contenttext);
+         $("#contenttext-body").html(result.contenttext);
          $("#exampleModal").modal('show');
       });
   });
@@ -40,3 +40,11 @@ function onlynumber(str) {
 str = String(str);
 return str.replace(/(\d)(?=(?:\d{3})+(?!\d))/g,'$1');
 }
+
+$(document).ready(function() {
+  $("#regi-form").on('submit', function () {
+     let textContents = $(".ql-editor").html();
+     $("#exampleFormControlTextarea1").html(textContents);
+     return true;
+  });
+});
