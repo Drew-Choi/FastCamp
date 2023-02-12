@@ -9,7 +9,7 @@
 $(document).ready(function() {
   $(".item-list").click(function () { 
     const product_N = $(this).attr('id');
-    $.get("http://127.0.0.1:5000/detail?product_name=" + product_N)
+    $.get("/detail?product_name=" + product_N)
       .then(function (result) {
          $("#exampleModalLabel").text(result.product_name);
          $("#contenttext-body").html(result.contenttext);
