@@ -1,0 +1,153 @@
+/* 컬러설정 */
+:root {
+  --pink: #ffe1da;
+  --indipink: #ffdbda;
+  --blue: #9dd0ff;
+  --yellow: #fff6d1;
+  --white: #fefefe;
+  --gray: #aaaaaa;
+  --black: #050203;
+}
+
+/* Common */
+body {
+  background-color: var(--pink);
+  margin: 0;
+  padding: 0;
+  font-family: 'Dongle', sans-serif;
+}
+
+.container {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  overflow: hidden;
+
+}
+
+section{
+  position: relative;
+  width: 100%;
+  max-width: 600px;
+}
+
+footer {
+  position: relative;
+  width: 100%;
+  max-width: 600px;
+}
+
+.overlay {
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.overlay2 {
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.5);
+}
+
+.back1 {
+  background-color: var(--indipink);
+  box-shadow: 1px 0px 15px 1px rgba(0, 0, 0, 0.5);
+}
+
+.bold {
+  font-weight: 600;
+}
+
+.small {
+  font-size: 20px;
+}
+
+.bg {
+  background-image: url("../static/bg.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+/* Individual */
+
+/* HEADER */
+header {
+  position: relative;
+  width: 100%;
+  height: 80vh;
+  background-image: url("../static/w1.png");
+  max-width: 600px;
+  background-position: 40% 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  text-align: center;
+  color: var(--white);
+}
+
+.first__title {
+  position: absolute;
+  width: 100%;
+  top: 20px;
+  font-size: 50px;
+}
+
+.first__date {
+  position: absolute;
+  width: 100%;
+  bottom: 10px;
+  font-size: 30px;
+}
+
+/* MAIN */
+
+/* Section Second */
+.second__introText {
+  width: 100%;
+  text-align: center;
+  font-size: 26px;
+  font-weight: 200;
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+.second__introText > span.bold {
+  font-size: 30px;
+}
+
+.second__image {
+  width: 100%;
+}
+
+.second_parents {
+  text-align: center;
+  font-size: 25px;
+  padding: 30px 40px;
+}
+
+.second_parents p.parents1 {
+  display: flex;
+  justify-content: space-between;
+}
+
+.second_parents p.parents2 {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Section Third */
+section.third {
+  text-align: center;
+  font-size: 26px;
+}
+
+section.third .third__texts {
+  padding: 50px 0px 30px 0;
+}
+
+section.third .third__texts h2 {
+  margin-top: 0;
+}
+
+.third__calender table tr td{
+  border: 1px solid black;
+}
