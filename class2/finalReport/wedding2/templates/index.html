@@ -5,8 +5,13 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <!-- CSS -->
-  <link rel="stylesheet" href="../static/style.css" />
+  <!-- DecoLibrary -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js" integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY2XofN4zfuZxLkoj1gXtW8ANNCe9d5Y3eG5eD" crossorigin="anonymous"></script>
+  <script src="https://kit.fontawesome.com/c37ef34cf6.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://kit.fontawesome.com/c37ef34cf6.css" crossorigin="anonymous">
   
   <!-- FONT  -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -18,10 +23,16 @@
   
   <!-- JavaScript -->
   <script defer src="../static/js.js"></script>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="../static/style.css" />
+  
   <title>김아무개씨와 이사랑씨의 청첩장</title>
  </head>
  <body onload="onload__calender()">
   <div class="container">
+
+    <!-- 대문 -->
     <header class="first">
       <div class="overlay">
        <h1 class="first__title">
@@ -37,6 +48,7 @@
       </div>
     </header>
     
+    <!-- 본론 -->
     <main>
     
      <section class="second bg">
@@ -55,9 +67,11 @@
         <div class="second_parents">
          <p class="parents1">
           김미미  안미미 <span class="small">의 장남</span> 김아무개
+          <a href="tel: 01000000000"><i class="fa-solid fa-mobile-retro"></i></a>
          </p>
          <p class="parents2">
           이행복  최행복 <span class="small">의 차녀</span> 이사랑&nbsp;&nbsp;&nbsp;
+          <a href="tel: 01000000000"><i class="fa-solid fa-mobile-retro"></i></a>
          </p>
         </div>
       </div>
@@ -87,13 +101,14 @@
       </div>
      </section>
 
-     <section class="fourth">
-      <div class="fourth__guestbook">
+     <section class="fourth bg">
+      <div class="overlay2">
+       <div class="fourth__guestbook">
         <h2>방명록</h2>
         <form class="fourth__guestbook__form">
-         <input type="text" placeholder="이름"/>
-         <textarea name="guestbook__textarea" cols="30" rows="10" placeholder="내용"></textarea>
-         <button type="submit">남기기</button>
+         <input class="input__name" type="text" placeholder="이름"/>
+         <textarea class="input__textarea" name="guestbook__textarea" cols="30" rows="10" placeholder="내용"></textarea>
+         <button type="submit" class="btn btn-primary btn__submit">남기기</button>
         </form>
         <table class="fourth__guestbook__posting">
          <tr class="posting__lineup">
@@ -101,6 +116,7 @@
           <td class="posting__content"></td>
          </tr>
         </table>
+       </div>
       </div>
      </section>
 
