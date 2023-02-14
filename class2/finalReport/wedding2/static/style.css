@@ -2,7 +2,7 @@
 :root {
   --pink: #ffe1da;
   --indipink: #ffdbda;
-  --blue: #9dd0ff;
+  --blue: #c7e4ff;
   --yellow: #fff6d1;
   --white: #fefefe;
   --gray: #aaaaaa;
@@ -141,13 +141,46 @@ section.third {
 }
 
 section.third .third__texts {
-  padding: 50px 0px 30px 0;
+  padding: 50px 0px 20px 0;
 }
 
 section.third .third__texts h2 {
+  font-size: 50px;
   margin-top: 0;
+  margin-bottom: 10px;
+}
+
+section.third .third__texts h3 {
+  font-size: 40px;
+  font-weight: 400;
+  margin-top: 0px;
+  margin-bottom: 10px;
 }
 
 .third__calender table tr td{
   border: 1px solid black;
+}
+
+/* 캘린더 */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  grid-gap: 5px;
+}
+
+.calender__head {
+  font-size: 35px;
+  padding: 10px;
+  
+}
+
+.specialDay {
+  background-color: rgba(255, 22, 166, 0.4);
+  color: var(--white);
+  font-weight: 600;
+  border-radius: 20px
+}
+
+.grid.claender__content div {
+  font-weight: 400;
 }

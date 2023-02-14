@@ -17,10 +17,10 @@
   <link href="https://fonts.googleapis.com/css2?family=Dongle:wght@300;400;700&display=swap" rel="stylesheet">
   
   <!-- JavaScript -->
-  <script src="../static/js.js"></script>
+  <script defer src="../static/js.js"></script>
   <title>김아무개씨와 이사랑씨의 청첩장</title>
  </head>
- <body>
+ <body onload="onload__calender()">
   <div class="container">
     <header class="first">
       <div class="overlay">
@@ -69,11 +69,18 @@
         <h3>오후 1시</h3>
       </div>
       <div class="third__calender">
-        <table id="main__calender">
-          <tr>
-
-          </tr>
-        </table>
+       <div class="grid calender__head">
+        <div>일</div>
+        <div>월</div>
+        <div>화</div>
+        <div>수</div>
+        <div>목</div>
+        <div>금</div>
+        <div>토</div>
+       </div>
+       <div class="grid claender__content">
+        
+       </div> 
        <p class="third__calender__text">
         아무개와 &hearts; 사랑의 결혼식 {{}}일 남았습니다.
        </p>
