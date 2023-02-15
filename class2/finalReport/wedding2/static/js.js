@@ -64,4 +64,33 @@ function onload__calender () {
     let specialDay = document.querySelector(".claender__content div:nth-child(20)")
     specialDay.classList.add("specialDay")
   }
+
+  //클릭스 이미지 모달
+  const imgEl = document.querySelectorAll(".d-block.w-100");
+
+  imgEl.forEach (function(element) {
+    element.addEventListener ("click", function() {
+      let src = this.getAttribute("src");
+      let modalImage = document.querySelector("#modal-image");
+       modalImage.setAttribute("src", src);
+       let modalShow = document.querySelector(".modal.fade");
+       modalShow.classList.add("show");
+       modalShow.style.display = "block";
+       modalShow.setAttribute("role", "dialog");
+    })
+  })
+   
+  
+
+  const closeBtnEl = document.querySelector(".btn-secondary");
+
+  closeBtnEl.addEventListener ("click", function() {
+    let modalImage = document.querySelector("#modal-image");
+     modalImage.removeAttribute("src");
+     let modalShow = document.querySelector(".modal.fade");
+     modalShow.classList.remove("show");
+     modalShow.style.display = "none";
+     modalShow.removeAttribute("role");
+  })
+
   
