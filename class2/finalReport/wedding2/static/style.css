@@ -82,6 +82,7 @@ header {
   background-repeat: no-repeat;
   text-align: center;
   color: var(--white);
+  z-index: 1;
 }
 
 .first__title {
@@ -101,6 +102,10 @@ header {
 /* MAIN */
 
 /* Section Second */
+section.second {
+  z-index: 1;
+}
+
 .second__introText {
   width: 100%;
   text-align: center;
@@ -143,6 +148,7 @@ header {
 section.third {
   text-align: center;
   font-size: 26px;
+  z-index: 2;
 }
 
 section.third .third__texts {
@@ -197,9 +203,9 @@ section.third .third__texts h3 {
 
 
 
-/* GuestBook */
+/* 4GuestBook */
 section.fourth {
-
+  z-index: 1;
 }
 
 .fourth__guestbook {
@@ -209,7 +215,7 @@ section.fourth {
 .fourth__guestbook > h2 {
   padding-top: 30px;
   margin-top: 0;
-  font-size: 45px;
+  font-size: 40px;
 }
 
 .fourth__guestbook__form {
@@ -252,4 +258,58 @@ section.fourth {
 .btn.btn-primary:hover {
   background-color: #ff6b6b;
   border-color: #ff9898;
+}
+
+/* Account */
+.fifth {
+  width: 100%;
+  height: 350px;
+  z-index: 2;
+}
+
+.fifth__account {
+ text-align: center;
+}
+
+.fifth__account > h2{
+  font-size: 40px;
+  padding-top: 40px;
+  padding-bottom: 10px;
+}
+
+.accordion {
+  margin: auto;
+  width: 80%;
+}
+
+.accordion-button {
+  background-color: #ff8989;
+  color: var(--white);
+  font-size: 25px;
+}
+
+.accordion-body {
+  font-size: 20px;
+}
+
+/* MAP */
+.sixth {
+  width: 100%;
+  height: 600px;
+  text-align: center;
+}
+
+.sixth .overlay2 > h2{
+  font-size: 40px;
+  padding-top: 40px;
+  padding-bottom: 10px;
+}
+
+.sixth__map {
+  margin: auto;
+}
+
+.root_daum_roughmap {
+  width: 80% !important;
+  margin: auto !important;
 }
