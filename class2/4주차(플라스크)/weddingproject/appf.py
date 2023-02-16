@@ -12,7 +12,7 @@ def wri():
     content = request.form.get('content')
     mongo.db['wedding'].insert_one({
      "name": name,
-      "content": content
+     "guest_written_text": content
     })
     return redirect('/')
 

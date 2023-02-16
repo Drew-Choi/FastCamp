@@ -82,7 +82,7 @@ header {
   background-repeat: no-repeat;
   text-align: center;
   color: var(--white);
-  z-index: 1;
+  z-index: 999;
 }
 
 .first__title {
@@ -206,6 +206,7 @@ section.third .third__texts h3 {
 /* 4GuestBook */
 section.fourth {
   z-index: 1;
+  height: 100%;
 }
 
 .fourth__guestbook {
@@ -260,6 +261,33 @@ section.fourth {
   border-color: #ff9898;
 }
 
+.fourth__guestbook__posting {
+  margin: auto;
+  width: 90%;
+  height: 100%;
+  background-color: var(--white);
+  border-radius: 10px;
+  border-spacing: 30px;
+  font-size: 20px;
+}
+
+.fourth__guestbook__posting > tbody {
+}
+
+.posting__lineup {
+ 
+}
+
+.posting__name {
+  width: 30%;
+  border-right: 1px solid var(--indipink);
+  border-bottom: 1px solid var(--indipink);
+}
+
+.posting__content {
+  border-bottom: 1px solid var(--indipink);
+}
+
 /* Account */
 .fifth {
   width: 100%;
@@ -275,6 +303,7 @@ section.fourth {
   font-size: 40px;
   padding-top: 40px;
   padding-bottom: 10px;
+  
 }
 
 .accordion {
@@ -354,4 +383,14 @@ section.fourth {
   background-color:#ff8989;
   border-color:#ff8989;
   color: white;
+}
+
+.snowflake {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background: linear-gradient(white, white);
+  /* Workaround for Chromium's selective color inversion */
+  border-radius: 50%;
+  filter: drop-shadow(0 0 10px white);
 }
