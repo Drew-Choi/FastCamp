@@ -8,7 +8,8 @@
   <!-- 데코레이션 -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
   <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
-  
+  <link href="https://cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet">
+
   <!-- FONT -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -18,35 +19,56 @@
   <script defer src="../static/DangJS.js"></script>
   <link rel="stylesheet" href="../static/DangRegiStyle.css" />
 
-  <title>DangDang2_Register</title>
+  <title>상품등록</title>
  </head>
  <body>
    <!-- 대문 -->
    <header>
     <div class="inner">
       <div class="title">
-        <a href="#"><h1>당당마켓</h1></a>
+        <a href="#"><h1>상품등록</h1></a>
       </div>
     </div>
    </header>
 
    <main>
     <div class="inner">
-      <section class="product">
-        <h3>상품 목록</h3>
-        <div class="line"></div>
-        <div class="line2"></div>
-        <div class="product__list">
-          <img src="../static/git 프로필.jpeg" alt="상품이미지" />
-          <ul>
-            <li class="product__list__name">강아지 인형</li>
-            <li class="product__list__location">동작구</li>
-            <li class="product__list__price">가격</li>
-          </ul>
+      <form class="product__registerForm">
+        <div class="mb-3">
+          <label for="product__name" class="form-label">상품명</label>
+          <input type="email" class="form-control" id="product__name" aria-describedby="emailHelp">
         </div>
-      
-        <a class="btn btn-primary" href="#" role="button">상품등록하기</a>
-      </section>
+        <div class="mb-3">
+          <label for="product__location" class="form-label">지역</label>
+          <input type="password" class="form-control" id="product__location">
+        </div>
+        <div class="mb-3">
+          <label for="product__price" class="form-label">가격</label>
+          <input type="password" class="form-control" id="product__price">
+        </div>
+        <div class="mb-3">
+          <label for="exampleFormControlTextarea1" class="form-label">내용</label>
+          <textarea name="contenttext"  id="exampleFormControlTextarea1" rows="4" 
+          style="display: none;"></textarea>
+          <div id="editor"></div>
+        </div>
+        <!-- Include the Quill library -->
+        <script src="https://cdn.quilljs.com/1.3.6/quill.js"></script>
+
+        <!-- Initialize Quill editor -->
+        <script>
+            var quill = new Quill('#editor', {
+              theme: 'snow'
+            });
+        </script>
+        <div class="mb-3">
+          <label for="product__image__file" class="form-label">이미지</label>
+          <input name="product__image" type="file" class="form-control product__image" id="product__image__file" aria-describedby="emailHelp">
+        </div>
+        <button type="submit" class="btn btn-primary" id="product__form__submit">등록하기</button>
+        <button type="submit" class="btn btn-primary" id="product__form__cancle">취소하기</button>
+
+      </form>
     </div>
    </main>
 
