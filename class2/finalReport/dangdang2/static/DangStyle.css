@@ -1,0 +1,178 @@
+/* 컬러설정 */
+:root {
+  --mint: #c1fff4;
+  --light-black: #999999;
+  --blue: #c7e4ff;
+  --yellow: #fff6d1;
+  --white: #fefefe;
+  --gray: #aaaaaa;
+  --black: #050203;
+  --fontColor: #414141;
+}
+
+/* Common */
+body {
+  color: var(--fontColor);
+  background-color: var(--white);
+  margin: 0;
+  padding: 0;
+  font-family: 'Noto Sans KR', sans-serif;
+  /* height: 3000px; */
+}
+
+.inner {
+  position: relative;
+  max-width: 600px;
+  margin: 0 auto;
+  overflow: hidden;
+  /* 가이드 */
+  /* background-color: beige; */
+}
+
+.line {
+  position: absolute;
+  top: 15px;
+  left: 205px;
+  width: 64%;
+  height: 1px;
+  background-color: var(--gray);
+}
+
+.line2 {
+  position: absolute;
+  top: 15px;
+  left: 10px;
+  width: 10%;
+  height: 1px;
+  background-color: var(--gray);
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+a {
+  all: unset;
+  cursor: pointer;
+}
+
+img {
+  display: block;
+  width: 30%;
+}
+
+/* Individual */
+header {
+  position: relative;
+  top: 0;
+  width: 100%;
+  height: 15vh;
+  z-index: 999;
+}
+
+header .inner {
+  background-color: rgb(255, 249, 233);
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+header .inner .title {
+  margin: auto;
+  width: 99.5%;
+  text-align: center;
+  background-color: var(--blue);
+  border-radius: 0 0 20px 20px;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+}
+
+header .inner .title h1 {
+  padding: 20px;
+  font-weight: 700;
+  color: #414141;
+  /* text-shadow: 1px 1px 1px rgba(0,0,0,0.2); */
+}
+
+main {
+  position: relative;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  color: var(--fontColor);
+}
+
+main .inner .product {
+  height: 100vh;
+  background-color: rgb(255, 249, 233);
+  color: var(--fontColor);
+}
+
+main .inner .product h3  {
+  position: absolute;
+  top: 0px;
+  left: 82px;
+}
+
+main .inner .product .product__list {
+  position: absolute;
+  top: 50px;
+}
+
+main .inner .product .register-btn {
+  position: absolute;
+  top: 770px;
+}
+
+main .inner .product .product__list {
+  display: flex;
+  padding: 10px;
+  margin: 30px;
+  border: 0.5px solid var(--light-black);
+}
+
+main .inner .product .product__list ul {
+  margin-left: 20px;
+}
+
+.product__list__name {
+  font-size: larger;
+  font-weight: bold;
+}
+
+.product__list__location {
+  font-size: medium
+}
+
+.product__list__price {
+  font-size: large
+}
+
+.btn {
+  position: absolute;
+  font-family: 'Noto Sans KR', sans-serif;
+  margin: 20px;
+  font-size: 10px;
+  right: 20px;
+  top: 13px;
+  background-color: var(--blue);
+  color: #606060;
+  border-color: #5ccbff;
+  box-shadow: 0 2px 2px rgba(0,0,0,0.16);
+}
+
+
+/* FOOTER */
+footer {
+  position: relative;
+  /* background-color: #9c9c9c; */
+  width: 100%;
+  height: 10vh;
+}
+
+.footer__copyright {
+  width: 100%;
+  height: 10vh;
+  background-color: #969696
+}
