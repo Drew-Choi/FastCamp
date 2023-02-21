@@ -139,7 +139,7 @@ main .inner .product__registerForm {
 
 #product__form__cancle {
   position: absolute;
-  bottom: 320px;
+  margin-top: 45px;
   right: 50%;
   transform: translateX(50%);
   width: 60%;
@@ -153,6 +153,27 @@ main .inner .product__registerForm {
   background-color: rgb(74, 74, 74);
   color: #eeeeee;
   border-color: #4c4c4c;
+}
+
+#location__searching {
+  font-size: 10px;
+  padding: 5px;
+  margin-bottom: 3px;
+  margin-left: 5px;
+  background-color: var(--blue);
+  color: #606060;
+  border-color: #5ccbff;
+  box-shadow: 0 2px 2px rgba(0,0,0,0.16);
+}
+
+#location__searching:hover {
+  background-color: #2f82ff;
+  color: #ffffff;
+  border-color: #0f6dfd;
+}
+
+#btnCloseLayer {
+  width: 20px;
 }
 
 /* FOOTER */
@@ -172,5 +193,14 @@ footer .inner {
   width: 100%;
   height: 6vh;
   border-radius: 20px 20px 0 0;
-  background-color: #969696
+  background-color: #969696;
+}
+
+.footer__copyright > p {
+  text-align: center;
+  margin-bottom: 0px;
+  padding-top: 20px;
+  font-size: 12px;
+  color: #fefefe;
+  letter-spacing: 1px;
 }

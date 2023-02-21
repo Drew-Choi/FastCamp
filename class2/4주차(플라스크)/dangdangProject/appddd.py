@@ -1,3 +1,5 @@
+# AWS 주소: http://43.201.147.8/
+
 import os
 from flask_pymongo import PyMongo
 from flask import Flask, render_template, request, redirect, jsonify
